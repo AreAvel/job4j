@@ -2,17 +2,17 @@ package ru.job4j.calculate;
 
 /**
 *Class Calculate
-*@author Nikolay Tkachenko (mailto:Tkach1702@mail.ru)
+*@author Nikolay Tkachenko(mailto:Tkach1702@mail.ru)
 *@version $Id$
 *since 05.08.2018
 */
-public class Calculate{
+public class Calculate {
 
      /**
      * main. output to the console inscriptions.
      * @param agrs - agrs.
      */
-	public static void main(String[] agrs){
+	public static void main(String[] agrs) {
 		System.out.println("Hello World");
 		}
      /**
@@ -20,7 +20,7 @@ public class Calculate{
      * @param name Your name.
      * @return Echo plus your name.		
      */
-	public String echo(String name){
+	public String echo(String name) {
 		return "Echo, echo, echo: " + name;
 		}
 	}
