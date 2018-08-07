@@ -4,7 +4,7 @@ package ru.job4j.calculate;
 *Class Calculate
 *@author Nikolay Tkachenko(mailto:Tkach1702@mail.ru)
 *@version $Id$
-*since 05.08.2018
+*since 1.0
 */
 public class Calculate {
 
