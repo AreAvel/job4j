@@ -9,7 +9,7 @@ package ru.job4j.max;
 public class Max {
 	/**
 	*@param first.
-        *@param second.
+    *@param second.
 	*@return maximum.
 	*/
 	public int max(int first, int second) {
