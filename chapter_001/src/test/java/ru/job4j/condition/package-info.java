@@ -1,5 +1,5 @@
 /**
- *Package fo condition
+ *Package fo DummyBotTest
  *
  *@author Nikolay Tkachenko (mailto:Tkach1702@mail.ru)
  *@version $Id$
