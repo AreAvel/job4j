@@ -7,8 +7,15 @@ import static org.junit.Assert.assertThat;
 public class MaxTest {
 	@Test
 	public void whenFirstLessSecond() {
-    		Max maxim = new Max();
-    		int result = maxim.max(1, 2);
+    	Max maxim = new Max();
+    	int result = maxim.max(1, 2);
 		assertThat(result, is(2));
+	}
+	@Test
+	public void whenFirstLessSecondAndSecondLessThird() {
+		Max maxim = new Max();
+		int result = maxim.max(1, 2);
+		result = maxim.max(result, 3);
+		assertThat(result, is(3));
 	}
 }
