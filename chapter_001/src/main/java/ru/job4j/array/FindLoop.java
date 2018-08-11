@@ -1,0 +1,25 @@
+package ru.job4j.array;
+/**
+*class FindLoop
+*@author Nikolay Tkachenko (mailto: Tkach1702@mail.ru).
+*@version $Id$
+*@since 0.1
+*/
+public class FindLoop {
+	/**
+	*indexOf.
+	*@param data - array.
+	*@param el - number.
+	*@return rst.
+	*/
+    public int indexOf(int[] data, int el) {
+        int rst = -1; // если элемента нет в массиве, то возвращаем -1.
+        for (int index = 0; index != data.length; index++) {
+            if (data[index] == el) {
+                rst = index;
+                break;
+            }
+        }
+        return rst;
+    }
+}
