@@ -14,13 +14,11 @@ public class BubbleSort {
      */
     public int[] sort(int[] array) {
         int temp;
-        for (int j = 0; j != (array.length - 1); j++) {
-            for (int i = 0; i != (array.length - 1); i++) {
-                if (array[i] > array[i + 1]) {
+        for (int j = 1; j != array.length; j++) {
+            for (int i = j; i >= 1 && array[i - 1] > array[i]; i--) { //в цикл заходим если есть элементы которые надо менять
                     temp = array[i];
-                    array[i] = array[i + 1];
-                    array[i + 1] = temp;
-                }
+                    array[i] = array[i - 1];
+                    array[i - 1] = temp;
             }
         }
         return array;
