@@ -8,7 +8,7 @@ package ru.job4j.array;
 public class Turn {
 	/**
 	*turn переворот массива.
-	*@param array
+	*@param array source array
 	*@return array
 	*/
     public int[] back(int[] array) {

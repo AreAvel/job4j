@@ -10,7 +10,7 @@ public class MatrixCheck {
     /**
      * mono
      *
-     * @param data
+     * @param data - source array
      * @return result
      */
     public boolean mono(boolean[][] data) {

@@ -9,7 +9,7 @@ package ru.job4j.array;
 public class Matrix {
     /**
      * multiple - multiplication table
-     *@param size
+     *@param size - source array
      *@return table
      */
     public int[][] multiple(int size) {

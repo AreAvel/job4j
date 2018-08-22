@@ -9,8 +9,8 @@ package ru.job4j.array;
 public class BubbleSort {
     /**
      * sort - bubble sorting
-     * @param array
-     * @return array
+     *@param array - source array
+     *@return array
      */
     public int[] sort(int[] array) {
         int temp;
