@@ -20,10 +20,14 @@ public class Logic3T {
      */
     public boolean isWinnerX() {
         boolean winX = false;
+
+        if (this.fillBy(Figure3T::hasMarkX, 0, 0, 1, 1)
+        || this.fillBy(Figure3T::hasMarkX, this.table.length - 1, 0, -1, 1)) {
+            winX = true;
+            return winX;
+        }
         for (int i = 0; i <= this.table.length - 1; i++) {
             if (this.fillBy(Figure3T::hasMarkX, i, 0, 0, 1)
-                    || this.fillBy(Figure3T::hasMarkX, 0, 0, 1, 1)
-                    || this.fillBy(Figure3T::hasMarkX, this.table.length - 1, 0, -1, 1)
                     || this.fillBy(Figure3T::hasMarkX, this.table.length - 1, i, -1, 0)) {
                 winX = true;
                 break;
@@ -37,10 +41,14 @@ public class Logic3T {
      */
     public boolean isWinnerO() {
         boolean winO = false;
+
+        if (this.fillBy(Figure3T::hasMarkO, 0, 0, 1, 1)
+                || this.fillBy(Figure3T::hasMarkO, this.table.length - 1, 0, -1, 1)) {
+            winO = true;
+            return winO;
+        }
         for (int i = 0; i <= this.table.length - 1; i++) {
             if (this.fillBy(Figure3T::hasMarkO, i, 0, 0, 1)
-                    || this.fillBy(Figure3T::hasMarkO, 0, 0, 1, 1)
-                    || this.fillBy(Figure3T::hasMarkO, this.table.length - 1, 0, -1, 1)
                     || this.fillBy(Figure3T::hasMarkO, this.table.length - 1, i, -1, 0)) {
                 winO = true;
                 break;
@@ -61,6 +69,9 @@ public class Logic3T {
                     vacant = true;
                     break;
                 }
+            }
+            if (vacant == true) {
+                break;
             }
         }
         return vacant;
