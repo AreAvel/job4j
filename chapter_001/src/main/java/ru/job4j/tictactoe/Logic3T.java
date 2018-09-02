@@ -19,45 +19,51 @@ public class Logic3T {
      * @return resalt (true or false)
      */
     public boolean isWinnerX() {
-        return this.fillBy(Figure3T::hasMarkX, 0, 0, 1, 0)
-                || this.fillBy(Figure3T::hasMarkX, 0, 0, 0, 1)
-                || this.fillBy(Figure3T::hasMarkX, 0, 0, 1, 1)
-                || this.fillBy(Figure3T::hasMarkX, this.table.length - 1, 0, -1, 1)
-                || this.fillBy(Figure3T::hasMarkX, this.table.length - 1, 0, 0, 1)
-                || this.fillBy(Figure3T::hasMarkX, 1, 0, 0, 1)
-                || this.fillBy(Figure3T::hasMarkX, this.table.length - 1, 1, -1, 0)
-                || this.fillBy(Figure3T::hasMarkX, this.table.length - 1, this.table.length - 1, -1, 0);
+        boolean winX = false;
+        for (int i = 0; i <= this.table.length - 1; i++) {
+            if (this.fillBy(Figure3T::hasMarkX, i, 0, 0, 1)
+                    || this.fillBy(Figure3T::hasMarkX, 0, 0, 1, 1)
+                    || this.fillBy(Figure3T::hasMarkX, this.table.length - 1, 0, -1, 1)
+                    || this.fillBy(Figure3T::hasMarkX, this.table.length - 1, i, -1, 0)) {
+                winX = true;
+                break;
+            }
+        }
+        return winX;
     }
-
     /**
      * isWinnerO - victory O
      * @return resalt (true or false)
      */
     public boolean isWinnerO() {
-        return this.fillBy(Figure3T::hasMarkO, 0, 0, 1, 0)
-                || this.fillBy(Figure3T::hasMarkO, 0, 0, 0, 1)
-                || this.fillBy(Figure3T::hasMarkO, 0, 0, 1, 1)
-                || this.fillBy(Figure3T::hasMarkO, this.table.length - 1, 0, -1, 1)
-                || this.fillBy(Figure3T::hasMarkO, this.table.length - 1, 0, 0, 1)
-                || this.fillBy(Figure3T::hasMarkO, 1, 0, 0, 1)
-                || this.fillBy(Figure3T::hasMarkO, this.table.length - 1, 1, -1, 0)
-                || this.fillBy(Figure3T::hasMarkO, this.table.length - 1, this.table.length - 1, -1, 0);
+        boolean winO = false;
+        for (int i = 0; i <= this.table.length - 1; i++) {
+            if (this.fillBy(Figure3T::hasMarkO, i, 0, 0, 1)
+                    || this.fillBy(Figure3T::hasMarkO, 0, 0, 1, 1)
+                    || this.fillBy(Figure3T::hasMarkO, this.table.length - 1, 0, -1, 1)
+                    || this.fillBy(Figure3T::hasMarkO, this.table.length - 1, i, -1, 0)) {
+                winO = true;
+                break;
+            }
+        }
+        return winO;
     }
     /**
      * hasGap - full table
      * @return resalt (true or false)
      */
     public boolean hasGap() {
-        boolean fulltable = false;
+        boolean vacant = false;
         for (int row = 0; row < table.length; row++) {
             for (int column = 0; column < table.length; column++) {
                 Figure3T cell = this.table[row][column];
                 if (!cell.hasMarkO() & !cell.hasMarkX()) {
-                    fulltable = true;
+                    vacant = true;
+                    break;
                 }
             }
         }
-        return fulltable;
+        return vacant;
     }
 
     public boolean fillBy(Predicate<Figure3T> predicate, int startX, int startY, int deltaX, int deltaY) {
