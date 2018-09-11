@@ -8,7 +8,7 @@ package ru.job4j.loop;
 public class Factorial {
 	/**
 	*calc - вычисление факториала.
-	*@param n.  
+	*@param n
 	*@return result.
 	*/
 	public int calc(int n) {

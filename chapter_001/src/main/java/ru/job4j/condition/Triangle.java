@@ -12,9 +12,9 @@ public class Triangle {
 	
 	/**
 	*calculate the area of ​​the triangle
-	*@param a.
-	*@param b.
-	*@param c.
+	*@param a
+	*@param b
+	*@param c
 	*/
 	public Triangle(Point a, Point b, Point c) {
 		this.a = a;

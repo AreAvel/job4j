@@ -8,8 +8,8 @@ package ru.job4j.loop;
 public class Counter {
 	/**
 	*add: сложение всех четных числе в заданном диапозоне
-	*@param start.
-	*@param finish.
+	*@param start
+	*@param finish
 	*@return result.
 	*/
 	public int add(int start, int finish) {

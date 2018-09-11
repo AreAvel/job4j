@@ -17,8 +17,6 @@ public class ArrayChar {
     public boolean startWith(String prefix) {
         boolean result = true;
         char[] value = prefix.toCharArray();
-        // проверить. что массив data имеет первые элементы одинаковые с value
-        //проверяем что исходный массив больше или равен префикса
         if (data.length >= value.length) {
             for (int i = 0; i != value.length; i++) {
                 if (data[i] != value[i]) {

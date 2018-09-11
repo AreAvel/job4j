@@ -9,7 +9,7 @@ package ru.job4j.array;
 public class Square {
 	/**
 	*calculate - массив заполняется числами, возведенными в квадрат.
-	*@param bound.
+	*@param bound
 	*@return rst.
 	*/
     public int[] calculate(int bound) {

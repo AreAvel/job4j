@@ -8,17 +8,17 @@ package ru.job4j.max;
 */
 public class Max {
 	/**
-	*@param first.
-    *@param second.
+	*@param first
+    *@param second
 	*@return maximum.
 	*/
 	public int max(int first, int second) {
 		return (first > second ? first : second);
 	}
 	/**
-	*@param first.
-	*@param second.
-	*@param third.
+	*@param first
+	*@param second
+	*@param third
 	*@return temp.
 	*/
 	public int max(int first, int second, int third) {
